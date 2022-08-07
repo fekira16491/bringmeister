@@ -6,7 +6,7 @@ import useGetProducts from "../hooks/useGetProducts";
 import styles from "../styles/Home.module.css";
 import LoadingSpinner from "../components/LoadingSpinner";
 import Product from "../components/Product";
-import { setProductsActions, selectProducts } from "../features/productReducer";
+import { setProductsActions, selectProducts } from "../features/product/productReducer";
 import { useAppDispatch, useAppSelector } from "../app/hooks";
 
 //Main page  componenet

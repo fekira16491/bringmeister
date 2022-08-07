@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "../styles/Home.module.css";
-import { ProductOptions } from "../features/productReducer";
+import { ProductOptions } from "../features/product/productTypes";
 import useGetCart from "../hooks/useGetCart";
 
 //Product componenet

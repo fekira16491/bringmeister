@@ -3,7 +3,7 @@ import {
   configureStore,
   ThunkAction,
 } from '@reduxjs/toolkit';
-import productReducer from '../features/productReducer';
+import productReducer from '../features/product/productReducer';
 
 export const store = configureStore({
   reducer: {
