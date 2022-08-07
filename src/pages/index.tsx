@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 import useGetCart from "../hooks/useGetCart";
 import useGetProducts from "../hooks/useGetProducts";
 import styles from "../styles/Home.module.css";
-import LoadingSpinner from "./LoadingSpinner";
-import Product from "./Product";
+import LoadingSpinner from "../components/LoadingSpinner";
+import Product from "../components/Product";
 import { setProductsActions, selectProducts } from "../features/productReducer";
 import { useAppDispatch, useAppSelector } from "../app/hooks";
 
