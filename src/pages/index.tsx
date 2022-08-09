@@ -8,6 +8,7 @@ import LoadingSpinner from "../components/LoadingSpinner";
 import Product from "../components/Product";
 import { setProductsActions, selectProducts } from "../features/product/productReducer";
 import { useAppDispatch, useAppSelector } from "../app/hooks";
+import { ProductOptions } from "../features/product/productTypes";
 
 //Main page  componenet
 const Home: NextPage = () => {
@@ -15,8 +16,8 @@ const Home: NextPage = () => {
     let { data, loading } = productsSource;
     let dispatch = useAppDispatch();
     let productsFromRedux = useAppSelector(selectProducts);
-    const [filterProducts, setFilterProducts] = useState<any[]>([]);
-    const [products, setProducts] = useState<any[]>([]);
+    const [filterProducts, setFilterProducts] = useState<ProductOptions[]>([]);
+    const [products, setProducts] = useState<ProductOptions[]>([]);
 
     useEffect(() => {
         setProductDetails();
@@ -36,7 +37,7 @@ const Home: NextPage = () => {
                 image: x.node.image,
                 baseUnit: x.node.prices.baseUnit,
                 sku: x.node.sku,
-            })) as any) || [];
+            })) as ProductOptions[]) || [];
         dispatch(setProductsActions({ productOptions: res }));
     };
 
